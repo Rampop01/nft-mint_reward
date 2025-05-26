@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #0A84FF;
+  --primary-dark: #0064D2;
+  --primary-light: #3B9EFF;
+  --accent: #1C1C1E;
+}
+
+/* Theme variables */
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: radial-gradient(ellipse at top, #111, #000);
+  background-attachment: fixed;
+  color: var(--foreground);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glowing effects */
+.glow {
+  box-shadow: 0 0 15px rgba(10, 132, 255, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(10, 132, 255, 0.5);
+}
+
+.glow-border {
+  box-shadow: 0 0 5px rgba(10, 132, 255, 0.3);
+}
+
+/* Background grid pattern */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(10, 132, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 132, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(10, 132, 255, 0.1);
+}
+
+/* Animated gradient background */
+.gradient-animate {
+  background: linear-gradient(45deg, #000, #070739, #000);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0A84FF;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0064D2;
+}
